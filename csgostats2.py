@@ -18,6 +18,7 @@ def getroundlist(demo):
 	auxlist =  []
 	for line in demo:
 		if "round_end" in line.split(" "):
+			auxlist.append(line)
 			roundlist.append(auxlist)
 			auxlist = []
 		else:
@@ -65,10 +66,8 @@ def roundanalyser(round):
 		#check if there was an interaction ( kill ) and parse the killer
 		if "killed" in element:
 			killer = getkiller(element)
-			print(killer)
 			updatedict(killcount,killer)
 			killed = getkilled(element)
-			print(killed)
 			updatedict(deathcount,killed)
 			if entryfrag:
 				entryfrag = False
@@ -79,9 +78,94 @@ def roundanalyser(round):
 				updatedict(awpkills,killer)
 	return 0
 
+def setteams(teams,team1tag,team2tag):
+	team1 = [0]
+	team2 = [0]
+	for key in teams:
+		if key == team1tag:
+			team1.append(teams.get(key))
+		if key == team2tag:
+			team2.append(teams.get(key))
+	return [team1,team2]
+
+def getteams(filename):
+	f = open(filename,'r')
+	tag = True
+	teamdic = {}
+	counter = 0
+	team = []
+	for line in f:
+		if tag:
+			teamtag = line.strip()
+			tag = False
+			team = []
+		else:
+			if counter<5:
+				team.append(line.strip())
+				counter +=1
+			else:
+				tag = True
+				teamdic[teamtag] = team
+				counter = 0
+	f.close()
+	return teamdic
 
 
+def registerscore(team1,team2,team1tag,team2tag,round):
+	if score.get(team1tag) is None:
+		score[team1tag] = 0
+	if score.get(team2tag) is None:
+		score[team2tag] = 0
+	winner = getwinner(team1,team2,team1tag,team2tag,round)
+	score[winner] +=1
+	return 0
 
+
+def getwinner(team1,team2,team1tag,team2tag,round):
+
+	bomb_defused = False
+	bomb_exploded = False
+	bomb_planted = False
+
+	for event in round:
+		if "bomb_defused" in event:
+			bomb_defused = True
+		if "bomb_exploded" in event:
+			bomb_exploded = True
+		if "bomb_planted" in event:
+			bomb_planted = True
+			bomb_planted_index = round.index(event)
+		if "round_end" in event:
+			round_end_index = round.index(event)
+
+	if bomb_defused:
+		return team1tag
+	if bomb_exploded:
+		return team2tag
+	if bomb_planted and not bomb_defused:
+		if bomb_planted_index<round_end_index:
+			return team2tag
+
+	if elimination(team1,team2,team1tag,team2tag,round) != "":
+		return elimination(team1,team2,team1tag,team2tag,round)
+
+	return team1tag
+
+def elimination(team1,team2,team1tag,team2tag,round):
+	team1players = 5
+	team2players = 5
+	for element in round:
+		if "killed" in element:
+			killed = getkilled(element)
+			if killed in team1:
+				team1players -=1
+			else:
+				team2players -=1
+	if team1players == 0:
+		return team2tag
+	if team2players ==0:
+		return team1tag
+	return ""
 
 
 def thescript(filenamelist):
@@ -97,15 +181,20 @@ def thescript(filenamelist):
 		gamemap = pre_gamemap[0]
 		
 		#setup teams
-		#teams = getteams("teams.txt")
-		#lineups = setteams(teams,team1tag,team2tag)
-		#team1 = lineups[0]
-		#team2 = lineups[1]
+		teams = getteams("teams.txt")
+		lineups = setteams(teams,team1tag,team2tag)
+		team1 = lineups[0]
+		team2 = lineups[1]
 
 		game = getroundlist(logfile)
 
+		round = 1
 		for element in game:
 			roundanalyser(element)
+			if round < 16:
+				registerscore(team1,team2,team1tag,team2tag,element)
+			else:
+				registerscore(team1,team2,team2tag,team1tag,element)
 
 		finalscore =  []
 		finalscore.append(killcount)
@@ -114,7 +203,8 @@ def thescript(filenamelist):
 		finalscore.append(entryfrags)
 		finalscore.append(awpkills)
 
-		print(finalscore)
+		#print(finalscore)
+		print(score)
 
 	return finalscore
 
