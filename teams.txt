@@ -20,17 +20,17 @@ coco4
 coco5
 
 K1ck
-K1CK SYON12'2'7 /JTC/
-K1CK vts*M /JTC/
-K1CK MILLIONRUDE
-K1CK dixon*A
+K1CK SYON
+K1CK vts
+K1CK MILLION
+K1CK dixon
 K1CK SOULZOR
 
 Hexcubo
 PLAT
-REZET /zt/ ,4J
-almeida[c*
-MISK,st
+REZET
+almeida
+MISK
 whatz
 
 Alientech
@@ -41,10 +41,10 @@ pnr
 obj
 
 Hexagone
-SDRIZZZ    $$
+SDRIZZZ
 renatoohaxx
-Born^
-stadod0   $$
+Born
+stadod0
 watsoN
 
 aaaaaa
