@@ -14,7 +14,7 @@ from decimal import *
 
 # Read the entire document, make a list of rounds.
 # put every element of the list(round) to tests
-# update all dictionaries with info
+# update all dictionaries with
 
 
 
