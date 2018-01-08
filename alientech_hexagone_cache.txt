@@ -1,0 +1,486 @@
+﻿Tick: 380  Event: round_freeze_end 
+Tick: 4072 : SDRIZZZ    $$ killed ZELIN with a headshot using a glock
+Tick: 4308  Event: bomb_beginplant 
+Tick: 4708 : pnr killed watsoN with a headshot using a usp_silencer
+Tick: 5440 : pnr killed stadod0   $$ with a headshot using a usp_silencer
+Tick: 5516  Event: bomb_dropped 
+Tick: 5516 : obj killed SDRIZZZ    $$ with a headshot using a usp_silencer
+Tick: 5548 : zlyNX killed Born^ with a headshot using a hkp2000
+Tick: 6396 : renatoohaxx killed zlyNX with a headshot using a glock
+Tick: 6480 : JUST ✪ A killed renatoohaxx using a usp_silencer
+Tick: 6480  Event: round_end 
+Tick: 7084  Event: cs_pre_restart 
+Tick: 7120  Event: bomb_pickup 
+Tick: 7120  Event: round_start 
+Tick: 8472  Event: bomb_dropped 
+Tick: 9680  Event: round_freeze_end 
+Tick: 9888  Event: bomb_pickup 
+Tick: 10840  Event: bomb_dropped 
+Tick: 16360  Event: bomb_pickup 
+Tick: 19952 : SDRIZZZ    $$ killed zlyNX using a cz75a
+Tick: 20008 : JUST ✪ A killed renatoohaxx using a famas
+Tick: 20092 : SDRIZZZ    $$ killed JUST ✪ A using a cz75a
+Tick: 20632  Event: bomb_beginplant 
+Tick: 21024  Event: bomb_planted 
+Tick: 21552 : ZELIN killed watsoN with a headshot using a ump45
+Tick: 21844 : Born^ killed obj with a headshot using a p250
+Tick: 22640 : pnr killed SDRIZZZ    $$ using a famas
+Tick: 22680 : Born^ killed pnr with a headshot using a p250
+Tick: 22892 : ZELIN killed Born^ using a ump45
+Tick: 23684 : stadod0   $$ killed ZELIN using a deagle
+Tick: 23684  Event: round_end 
+Tick: 24288  Event: cs_pre_restart 
+Tick: 24324  Event: bomb_pickup 
+Tick: 24324  Event: round_start 
+Tick: 26885  Event: round_freeze_end 
+Tick: 28073  Event: bomb_dropped 
+Tick: 33397  Event: bomb_pickup 
+Tick: 36097 : ZELIN killed renatoohaxx with a headshot using a deagle
+Tick: 36213  Event: bomb_beginplant 
+Tick: 36241 : watsoN killed obj with a headshot using a ak47
+Tick: 36281 : ZELIN killed watsoN with a headshot using a deagle
+Tick: 36605  Event: bomb_planted 
+Tick: 36925 : stadod0   $$ killed JUST ✪ A using a ump45
+Tick: 37121 : stadod0   $$ killed ZELIN with a headshot using a ump45
+Tick: 37185 : Born^ killed pnr using a ak47
+Tick: 39833 : SDRIZZZ    $$ killed zlyNX with a headshot using a ak47
+Tick: 39833  Event: round_end 
+Tick: 40437  Event: cs_pre_restart 
+Tick: 40476  Event: bomb_pickup 
+Tick: 40476  Event: round_start 
+Tick: 40680  Event: bomb_dropped 
+Tick: 43032  Event: round_freeze_end 
+Tick: 43124  Event: bomb_pickup 
+Tick: 43416  Event: bomb_dropped 
+Tick: 43428  Event: bomb_pickup 
+Tick: 45116 : renatoohaxx killed pnr using a mac10
+Tick: 46400  Event: bomb_dropped 
+Tick: 46996 : renatoohaxx killed ZELIN with a headshot using a mac10
+Tick: 49056 : Born^ killed obj with a headshot using a ak47
+Tick: 49180 : Born^ killed zlyNX using a ak47
+Tick: 49344 : renatoohaxx killed JUST ✪ A using a mac10
+Tick: 49344  Event: round_end 
+Tick: 49632  Event: bomb_pickup 
+Tick: 49948  Event: cs_pre_restart 
+Tick: 49986  Event: bomb_pickup 
+Tick: 49986  Event: round_start 
+Tick: 52546  Event: round_freeze_end 
+Tick: 54134  Event: bomb_dropped 
+Tick: 54206  Event: bomb_pickup 
+Tick: 55618 : JUST ✪ A killed renatoohaxx using a m4a1
+Tick: 55730  Event: bomb_dropped 
+Tick: 55730 : JUST ✪ A killed SDRIZZZ    $$ with a headshot using a m4a1
+Tick: 55850 : stadod0   $$ killed JUST ✪ A using a ak47
+Tick: 56042 : Born^ killed zlyNX using a ak47
+Tick: 56314 : Born^ killed pnr with a headshot using a ak47
+Tick: 56718  Event: bomb_pickup 
+Tick: 57078  Event: bomb_beginplant 
+Tick: 57470  Event: bomb_planted 
+Tick: 59026 : ZELIN killed watsoN with a headshot using a m4a1
+Tick: 59242 : ZELIN killed Born^ with a headshot using a m4a1
+Tick: 59510 : obj killed stadod0   $$ using a awp
+Tick: 60046  Event: bomb_begindefuse 
+Tick: 61326  Event: bomb_defused 
+Tick: 61326  Event: round_end 
+Tick: 61930  Event: cs_pre_restart 
+Tick: 61966  Event: bomb_pickup 
+Tick: 61966  Event: round_start 
+Tick: 64526  Event: round_freeze_end 
+Tick: 65850  Event: bomb_dropped 
+Tick: 69082  Event: bomb_pickup 
+Tick: 71646 : obj killed renatoohaxx using a awp
+Tick: 73914 : pnr killed stadod0   $$ with a headshot using a m4a1
+Tick: 75038  Event: bomb_dropped 
+Tick: 75038 : obj killed SDRIZZZ    $$ using a awp
+Tick: 75102 : ZELIN killed watsoN with a headshot using a ak47
+Tick: 75470 : Born^ killed pnr with a headshot using a ak47
+Tick: 75578 : ZELIN killed Born^ using a ak47
+Tick: 75578  Event: round_end 
+Tick: 76178  Event: cs_pre_restart 
+Tick: 76220  Event: bomb_pickup 
+Tick: 76220  Event: round_start 
+Tick: 87960  Event: bomb_dropped 
+Tick: 88036  Event: bomb_pickup 
+Tick: 123924 : stadod0   $$ killed  using a world
+Tick: 123924  Event: bomb_dropped 
+Tick: 123924 : watsoN killed  using a world
+Tick: 123924 : ZELIN killed  using a world
+Tick: 123924 : pnr killed  using a world
+Tick: 123924 : renatoohaxx killed  using a world
+Tick: 123924 : zlyNX killed  using a world
+Tick: 123924 : Born^ killed  using a world
+Tick: 123924 : SDRIZZZ    $$ killed  using a world
+Tick: 123924 : JUST ✪ A killed  using a world
+Tick: 123924 : obj killed  using a world
+Tick: 123924  Event: announce_phase_end 
+Tick: 123924  Event: round_end 
+Tick: 123924  Event: cs_pre_restart 
+Tick: 123924  Event: bomb_pickup 
+Tick: 123924  Event: round_start 
+Tick: 126816  Event: bomb_dropped 
+Tick: 126892  Event: bomb_pickup 
+Tick: 131577  Event: round_freeze_end 
+Tick: 132489  Event: bomb_dropped 
+Tick: 135981  Event: bomb_pickup 
+Tick: 136109 : obj killed Born^ with a headshot using a awp
+Tick: 138309 : pnr killed watsoN using a m4a1
+Tick: 138313 : renatoohaxx killed ZELIN with a headshot using a ak47
+Tick: 138553 : SDRIZZZ    $$ killed pnr with a headshot using a ak47
+Tick: 138901  Event: bomb_beginplant 
+Tick: 139289  Event: bomb_planted 
+Tick: 140781 : zlyNX killed SDRIZZZ    $$ using a m4a1
+Tick: 141469 : stadod0   $$ killed zlyNX with a headshot using a ak47
+Tick: 141929 : JUST ✪ A killed renatoohaxx using a m4a1
+Tick: 142081 : JUST ✪ A killed stadod0   $$ with a headshot using a m4a1
+Tick: 142505  Event: bomb_begindefuse 
+Tick: 143149  Event: bomb_defused 
+Tick: 143149  Event: round_end 
+Tick: 143753  Event: cs_pre_restart 
+Tick: 143789  Event: bomb_pickup 
+Tick: 143789  Event: round_start 
+Tick: 146350  Event: round_freeze_end 
+Tick: 152042 : zlyNX killed renatoohaxx using a m4a1
+Tick: 152374 : zlyNX killed Born^ using a m4a1
+Tick: 152626 : zlyNX killed watsoN with a headshot using a m4a1
+Tick: 152810  Event: bomb_dropped 
+Tick: 152810 : zlyNX killed SDRIZZZ    $$ using a m4a1
+Tick: 153254 : zlyNX killed stadod0   $$ using a hkp2000
+Tick: 153254  Event: round_end 
+Tick: 153858  Event: cs_pre_restart 
+Tick: 153899  Event: bomb_pickup 
+Tick: 153899  Event: round_start 
+Tick: 156455  Event: round_freeze_end 
+Tick: 157535  Event: bomb_dropped 
+Tick: 158003  Event: bomb_pickup 
+Tick: 158047 : renatoohaxx killed zlyNX using a ak47
+Tick: 158175 : pnr killed renatoohaxx using a m4a1
+Tick: 158251 : ZELIN killed SDRIZZZ    $$ using a m4a1
+Tick: 158423 : pnr killed stadod0   $$ using a m4a1
+Tick: 159399 : JUST ✪ A killed Born^ with a headshot using a ak47
+Tick: 161263  Event: bomb_dropped 
+Tick: 161263 : JUST ✪ A killed watsoN using a ak47
+Tick: 161263  Event: round_end 
+Tick: 161867  Event: cs_pre_restart 
+Tick: 161909  Event: bomb_pickup 
+Tick: 161909  Event: round_start 
+Tick: 164465  Event: round_freeze_end 
+Tick: 166201 : pnr killed stadod0   $$ using a m4a1
+Tick: 166329  Event: bomb_dropped 
+Tick: 166329 : pnr killed watsoN using a m4a1
+Tick: 166569 : SDRIZZZ    $$ killed pnr using a cz75a
+Tick: 166745 : ZELIN killed Born^ using a m4a1
+Tick: 167069 : renatoohaxx killed ZELIN using a cz75a
+Tick: 167501  Event: bomb_pickup 
+Tick: 173949  Event: bomb_dropped 
+Tick: 173949 : obj killed SDRIZZZ    $$ using a awp
+Tick: 174461 : renatoohaxx killed obj with a headshot using a cz75a
+Tick: 175149  Event: bomb_pickup 
+Tick: 175633  Event: bomb_dropped 
+Tick: 175633 : zlyNX killed renatoohaxx using a ak47
+Tick: 175633  Event: round_end 
+Tick: 176237  Event: cs_pre_restart 
+Tick: 176278  Event: bomb_pickup 
+Tick: 176278  Event: round_start 
+Tick: 176810  Event: bomb_dropped 
+Tick: 176886  Event: bomb_pickup 
+Tick: 178834  Event: round_freeze_end 
+Tick: 188454  Event: bomb_dropped 
+Tick: 188454 : pnr killed SDRIZZZ    $$ with a headshot using a m4a1
+Tick: 188886 : pnr killed stadod0   $$ using a m4a1
+Tick: 188954 : renatoohaxx killed pnr using a ak47
+Tick: 189318  Event: bomb_pickup 
+Tick: 189906  Event: bomb_dropped 
+Tick: 189906 : zlyNX killed renatoohaxx using a ak47
+Tick: 190050 : obj killed Born^ using a awp
+Tick: 190242 : watsoN killed ZELIN using a awp
+Tick: 190346 : obj killed watsoN using a awp
+Tick: 190346  Event: round_end 
+Tick: 190954  Event: cs_pre_restart 
+Tick: 190993  Event: bomb_pickup 
+Tick: 190993  Event: round_start 
+Tick: 199149  Event: round_freeze_end 
+Tick: 202045 : JUST ✪ A killed renatoohaxx with a headshot using a awp
+Tick: 203557  Event: bomb_dropped 
+Tick: 203633  Event: bomb_pickup 
+Tick: 203833 : JUST ✪ A killed watsoN using a awp
+Tick: 203853  Event: bomb_dropped 
+Tick: 203853 : zlyNX killed SDRIZZZ    $$ using a ak47
+Tick: 203993 : ZELIN killed Born^ with a headshot using a m4a1
+Tick: 204261 : ZELIN killed stadod0   $$ using a m4a1
+Tick: 204261  Event: round_end 
+Tick: 204865  Event: cs_pre_restart 
+Tick: 204904  Event: bomb_pickup 
+Tick: 204904  Event: round_start 
+Tick: 207460  Event: round_freeze_end 
+Tick: 209040 : stadod0   $$ killed JUST ✪ A with a headshot using a deagle
+Tick: 210172 : zlyNX killed stadod0   $$ using a ak47
+Tick: 210284 : pnr killed renatoohaxx using a ak47
+Tick: 210544  Event: bomb_dropped 
+Tick: 210552 : ZELIN killed watsoN with a headshot using a ak47
+Tick: 210836 : zlyNX killed SDRIZZZ    $$ with a headshot using a ak47
+Tick: 211372 : ZELIN killed Born^ with a headshot using a ak47
+Tick: 211372  Event: round_end 
+Tick: 211976  Event: cs_pre_restart 
+Tick: 212012  Event: bomb_pickup 
+Tick: 212012  Event: round_start 
+Tick: 212968  Event: bomb_dropped 
+Tick: 213044  Event: bomb_pickup 
+Tick: 214572  Event: round_freeze_end 
+Tick: 215472  Event: bomb_dropped 
+Tick: 215484  Event: bomb_pickup 
+Tick: 215604  Event: bomb_dropped 
+Tick: 221916  Event: bomb_pickup 
+Tick: 222172 : renatoohaxx killed ZELIN using a ak47
+Tick: 224780 : SDRIZZZ    $$ killed pnr using a ak47
+Tick: 225188 : SDRIZZZ    $$ killed obj with a headshot using a ak47
+Tick: 225424 : JUST ✪ A killed SDRIZZZ    $$ using a awp
+Tick: 226104  Event: bomb_beginplant 
+Tick: 226492  Event: bomb_planted 
+Tick: 226504 : stadod0   $$ killed JUST ✪ A with a headshot using a awp
+Tick: 227752 : stadod0   $$ killed zlyNX using a awp
+Tick: 227752  Event: round_end 
+Tick: 228356  Event: cs_pre_restart 
+Tick: 228392  Event: bomb_pickup 
+Tick: 228392  Event: round_start 
+Tick: 229404  Event: bomb_dropped 
+Tick: 230952  Event: round_freeze_end 
+Tick: 231040  Event: bomb_pickup 
+Tick: 231876  Event: bomb_dropped 
+Tick: 236736  Event: bomb_pickup 
+Tick: 239688 : renatoohaxx killed JUST ✪ A with a headshot using a ak47
+Tick: 239780 : zlyNX killed renatoohaxx using a m4a1
+Tick: 240012 : SDRIZZZ    $$ killed zlyNX with a headshot using a ak47
+Tick: 240548  Event: bomb_beginplant 
+Tick: 240936  Event: bomb_planted 
+Tick: 241632 : stadod0   $$ killed obj using a awp
+Tick: 241984 : Born^ killed ZELIN using a ak47
+Tick: 242856 : stadod0   $$ killed pnr using a awp
+Tick: 242856  Event: round_end 
+Tick: 244776  Event: announce_phase_end 
+Tick: 246192  Event: bomb_exploded 
+Tick: 246764  Event: cs_pre_restart 
+Tick: 246800  Event: bomb_pickup 
+Tick: 246800  Event: round_start 
+Tick: 249473  Event: bomb_dropped 
+Tick: 249485  Event: bomb_pickup 
+Tick: 257617  Event: bomb_dropped 
+Tick: 257629  Event: bomb_pickup 
+Tick: 259921  Event: round_freeze_end 
+Tick: 262665 : obj killed watsoN with a headshot using a glock
+Tick: 262741 : SDRIZZZ    $$ killed ZELIN with a headshot using a usp_silencer
+Tick: 263001 : SDRIZZZ    $$ killed JUST ✪ A with a headshot using a usp_silencer
+Tick: 263125 : SDRIZZZ    $$ killed zlyNX with a headshot using a usp_silencer
+Tick: 263205 : pnr killed stadod0   $$ with a headshot using a glock
+Tick: 263377 : pnr killed renatoohaxx using a glock
+Tick: 263441 : Born^ killed pnr with a headshot using a usp_silencer
+Tick: 263541 : obj killed Born^ with a headshot using a glock
+Tick: 263641  Event: bomb_dropped 
+Tick: 263641 : SDRIZZZ    $$ killed obj using a usp_silencer
+Tick: 263641  Event: round_end 
+Tick: 264241  Event: cs_pre_restart 
+Tick: 264277  Event: bomb_pickup 
+Tick: 264277  Event: round_start 
+Tick: 266838  Event: round_freeze_end 
+Tick: 270062 : JUST ✪ A killed stadod0   $$ with a headshot using a cz75a
+Tick: 270406  Event: bomb_dropped 
+Tick: 270406 : watsoN killed JUST ✪ A using a ump45
+Tick: 270694 : pnr killed watsoN using a deagle
+Tick: 271170  Event: bomb_pickup 
+Tick: 271182 : obj killed Born^ using a cz75a
+Tick: 271378  Event: bomb_beginplant 
+Tick: 271770  Event: bomb_planted 
+Tick: 273210 : renatoohaxx killed obj using a mp7
+Tick: 273386 : zlyNX killed renatoohaxx with a headshot using a p250
+Tick: 276246 : pnr killed SDRIZZZ    $$ using a ump45
+Tick: 276246  Event: round_end 
+Tick: 276854  Event: cs_pre_restart 
+Tick: 276893  Event: bomb_pickup 
+Tick: 276893  Event: round_start 
+Tick: 279449  Event: round_freeze_end 
+Tick: 283913 : renatoohaxx killed obj with a headshot using a ssg08
+Tick: 284325 : zlyNX killed stadod0   $$ using a famas
+Tick: 284337 : SDRIZZZ    $$ killed zlyNX using a cz75a
+Tick: 286377 : pnr killed watsoN with a headshot using a ak47
+Tick: 287785  Event: bomb_dropped 
+Tick: 287785 : Born^ killed ZELIN with a headshot using a p250
+Tick: 288057  Event: bomb_pickup 
+Tick: 288061 : Born^ killed pnr with a headshot using a p250
+Tick: 288325  Event: bomb_dropped 
+Tick: 288325 : Born^ killed JUST ✪ A with a headshot using a p250
+Tick: 288325  Event: round_end 
+Tick: 288929  Event: cs_pre_restart 
+Tick: 288970  Event: bomb_pickup 
+Tick: 288970  Event: round_start 
+Tick: 291526  Event: round_freeze_end 
+Tick: 291982  Event: bomb_dropped 
+Tick: 292166  Event: bomb_pickup 
+Tick: 292878  Event: bomb_dropped 
+Tick: 295794  Event: bomb_pickup 
+Tick: 299006 : Born^ killed zlyNX using a m4a1
+Tick: 299242 : Born^ killed obj with a headshot using a m4a1
+Tick: 299350  Event: bomb_dropped 
+Tick: 299350 : Born^ killed pnr with a headshot using a m4a1
+Tick: 299426 : stadod0   $$ killed ZELIN with a headshot using a ump45
+Tick: 299926 : stadod0   $$ killed JUST ✪ A using a ump45
+Tick: 299926  Event: round_end 
+Tick: 300530  Event: cs_pre_restart 
+Tick: 300566  Event: bomb_pickup 
+Tick: 300566  Event: round_start 
+Tick: 303126  Event: round_freeze_end 
+Tick: 303762  Event: bomb_dropped 
+Tick: 306398 : ZELIN killed Born^ with a headshot using a ak47
+Tick: 306622  Event: bomb_pickup 
+Tick: 309306 : pnr killed SDRIZZZ    $$ with a headshot using a ak47
+Tick: 310322 : obj killed stadod0   $$ using a ak47
+Tick: 311466 : watsoN killed zlyNX with a headshot using a ssg08
+Tick: 312034  Event: bomb_beginplant 
+Tick: 312422  Event: bomb_planted 
+Tick: 316074 : renatoohaxx killed obj with a headshot using a ak47
+Tick: 317578 : renatoohaxx killed ZELIN with a headshot using a ak47
+Tick: 317678  Event: round_end 
+Tick: 317678  Event: bomb_exploded 
+Tick: 318278  Event: cs_pre_restart 
+Tick: 318319  Event: bomb_pickup 
+Tick: 318319  Event: round_start 
+Tick: 318423  Event: bomb_dropped 
+Tick: 318499  Event: bomb_pickup 
+Tick: 320291  Event: bomb_dropped 
+Tick: 320367  Event: bomb_pickup 
+Tick: 320875  Event: round_freeze_end 
+Tick: 321439  Event: bomb_dropped 
+Tick: 325863  Event: bomb_pickup 
+Tick: 326795  Event: bomb_dropped 
+Tick: 326915  Event: bomb_pickup 
+Tick: 329539 : stadod0   $$ killed pnr with a headshot using a m4a1
+Tick: 329691 : Born^ killed obj with a headshot using a m4a1
+Tick: 329723 : JUST ✪ A killed stadod0   $$ using a ak47
+Tick: 329751  Event: bomb_dropped 
+Tick: 329751 : SDRIZZZ    $$ killed JUST ✪ A using a ak47
+Tick: 330907 : Born^ killed zlyNX using a m4a1
+Tick: 331231 : ZELIN killed Born^ with a headshot using a ak47
+Tick: 331443 : ZELIN killed SDRIZZZ    $$ using a ak47
+Tick: 332215  Event: bomb_pickup 
+Tick: 332663  Event: bomb_beginplant 
+Tick: 333055  Event: bomb_planted 
+Tick: 334443 : ZELIN killed watsoN with a headshot using a ak47
+Tick: 335215 : renatoohaxx killed ZELIN with a headshot using a m4a1
+Tick: 335611  Event: bomb_begindefuse 
+Tick: 336255  Event: bomb_defused 
+Tick: 336255  Event: round_end 
+Tick: 336855  Event: cs_pre_restart 
+Tick: 336898  Event: bomb_pickup 
+Tick: 336898  Event: round_start 
+Tick: 339090  Event: bomb_dropped 
+Tick: 339170  Event: bomb_pickup 
+Tick: 339454  Event: round_freeze_end 
+Tick: 339786  Event: bomb_dropped 
+Tick: 339858  Event: bomb_pickup 
+Tick: 344302 : ZELIN killed stadod0   $$ using a cz75a
+Tick: 344526 : pnr killed Born^ using a p250
+Tick: 344658 : Born^ killed pnr using a inferno
+Tick: 345222  Event: bomb_beginplant 
+Tick: 345610  Event: bomb_planted 
+Tick: 347374 : renatoohaxx killed obj using a m4a1
+Tick: 347622 : ZELIN killed watsoN with a headshot using a m4a1
+Tick: 347910 : JUST ✪ A killed renatoohaxx with a headshot using a m4a1
+Tick: 348242 : SDRIZZZ    $$ killed ZELIN with a headshot using a m4a1
+Tick: 348958 : JUST ✪ A killed SDRIZZZ    $$ using a m4a1
+Tick: 348958  Event: round_end 
+Tick: 349562  Event: cs_pre_restart 
+Tick: 349603  Event: bomb_pickup 
+Tick: 349603  Event: round_start 
+Tick: 350091  Event: bomb_dropped 
+Tick: 350199  Event: bomb_pickup 
+Tick: 351447  Event: bomb_dropped 
+Tick: 351503  Event: bomb_pickup 
+Tick: 351671  Event: bomb_dropped 
+Tick: 351747  Event: bomb_pickup 
+Tick: 352159  Event: round_freeze_end 
+Tick: 352727  Event: bomb_dropped 
+Tick: 352899  Event: bomb_pickup 
+Tick: 355891 : pnr killed Born^ using a ak47
+Tick: 356603 : zlyNX killed stadod0   $$ using a ak47
+Tick: 356827 : ZELIN killed SDRIZZZ    $$ with a headshot using a ak47
+Tick: 357851 : renatoohaxx killed obj with a headshot using a deagle
+Tick: 357915  Event: bomb_beginplant 
+Tick: 357951 : JUST ✪ A killed renatoohaxx using a m4a1
+Tick: 358307  Event: bomb_planted 
+Tick: 360711 : pnr killed watsoN using a ak47
+Tick: 360711  Event: round_end 
+Tick: 361315  Event: cs_pre_restart 
+Tick: 361351  Event: bomb_pickup 
+Tick: 361351  Event: round_start 
+Tick: 362515  Event: bomb_dropped 
+Tick: 362591  Event: bomb_pickup 
+Tick: 363911  Event: round_freeze_end 
+Tick: 365567 : watsoN killed obj with a headshot using a m4a1
+Tick: 365799 : Born^ killed zlyNX with a headshot using a m4a1
+Tick: 365851 : watsoN killed ZELIN with a headshot using a m4a1
+Tick: 365911  Event: bomb_dropped 
+Tick: 365911 : Born^ killed JUST ✪ A using a m4a1
+Tick: 365971 : pnr killed stadod0   $$ using a ak47
+Tick: 367383 : SDRIZZZ    $$ killed pnr with a headshot using a famas
+Tick: 367383  Event: round_end 
+Tick: 367987  Event: cs_pre_restart 
+Tick: 368026  Event: bomb_pickup 
+Tick: 368026  Event: round_start 
+Tick: 370582  Event: round_freeze_end 
+Tick: 371566  Event: bomb_dropped 
+Tick: 371974  Event: bomb_pickup 
+Tick: 376346  Event: bomb_beginplant 
+Tick: 376738  Event: bomb_planted 
+Tick: 378090 : SDRIZZZ    $$ killed JUST ✪ A using a ak47
+Tick: 378378 : renatoohaxx killed obj using a ak47
+Tick: 378462 : SDRIZZZ    $$ killed ZELIN with a headshot using a ak47
+Tick: 378854 : pnr killed watsoN with a headshot using a ak47
+Tick: 379022 : SDRIZZZ    $$ killed pnr with a headshot using a ak47
+Tick: 379258 : zlyNX killed Born^ with a headshot using a ak47
+Tick: 379382 : zlyNX killed SDRIZZZ    $$ with a headshot using a ak47
+Tick: 379654 : renatoohaxx killed zlyNX using a ak47
+Tick: 379926  Event: bomb_begindefuse 
+Tick: 380570  Event: bomb_defused 
+Tick: 380570  Event: round_end 
+Tick: 381170  Event: cs_pre_restart 
+Tick: 381212  Event: bomb_pickup 
+Tick: 381212  Event: round_start 
+Tick: 381300  Event: bomb_dropped 
+Tick: 381312  Event: bomb_pickup 
+Tick: 382636  Event: bomb_dropped 
+Tick: 382648  Event: bomb_pickup 
+Tick: 383144  Event: bomb_dropped 
+Tick: 383768  Event: round_freeze_end 
+Tick: 383924  Event: bomb_pickup 
+Tick: 387024 : zlyNX killed SDRIZZZ    $$ using a cz75a
+Tick: 387144  Event: bomb_dropped 
+Tick: 387144 : stadod0   $$ killed pnr using a awp
+Tick: 387224 : zlyNX killed stadod0   $$ with a headshot using a cz75a
+Tick: 387364  Event: bomb_pickup 
+Tick: 387952  Event: bomb_beginplant 
+Tick: 388344  Event: bomb_planted 
+Tick: 390396 : watsoN killed JUST ✪ A using a awp
+Tick: 390500 : obj killed watsoN using a ak47
+Tick: 390772 : ZELIN killed renatoohaxx with a headshot using a p250
+Tick: 391044 : obj killed Born^ with a headshot using a ak47
+Tick: 391044  Event: round_end 
+Tick: 391648  Event: cs_pre_restart 
+Tick: 391684  Event: bomb_pickup 
+Tick: 391684  Event: round_start 
+Tick: 394128  Event: bomb_dropped 
+Tick: 394244  Event: round_freeze_end 
+Tick: 394296  Event: bomb_pickup 
+Tick: 394576  Event: bomb_dropped 
+Tick: 394864  Event: bomb_pickup 
+Tick: 395020  Event: bomb_dropped 
+Tick: 395368 : obj killed renatoohaxx using a awp
+Tick: 396584 : ZELIN killed Born^ using a m4a1
+Tick: 396992 : stadod0   $$ killed zlyNX with a headshot using a cz75a
+Tick: 397044 : obj killed watsoN using a awp
+Tick: 397280 : obj killed SDRIZZZ    $$ using a awp
+Tick: 397892  Event: bomb_pickup 
+Tick: 399321 : ZELIN killed stadod0   $$ using a m4a1
+Tick: 399321  Event: round_end 
+Tick: 399321  Event: round_freeze_end 
+Host_WriteConfiguration: Wrote cfg/config.cfg
+Steamworks gamestats: CS_App_Lifetime_Gamestats adding game session 1623651486240Unable to remove c:\program files (x86)\steam\steamapps\common\counter-strike global offensive\csgo\textwindow_temp.html! (errno 2)
+Shutdown function NET_Shutdown() not in list!!!
+Shutdown function ShutdownMixerControls() not in list!!!
