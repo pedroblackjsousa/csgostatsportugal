@@ -11,18 +11,18 @@ entryfrags = {}
 headshots = {}
 awpkills = {}
 score = {}
-stoppermessage = "Host_WriteConfiguration"
+#stoppermessage = "Host_WriteConfiguration"
 
 def getroundlist(demo):
 	roundlist = []
 	auxlist =  []
 	for line in demo:
 		if "round_end" in line.split(" "):
-			auxlist.append(line)
+			auxlist.append(line.strip())
 			roundlist.append(auxlist)
 			auxlist = []
 		else:
-			auxlist.append(line)
+			auxlist.append(line.strip())
 	return roundlist
 
 def getkiller(event):
@@ -78,9 +78,49 @@ def roundanalyser(round):
 				updatedict(awpkills,killer)
 	return 0
 
+
+def clutchsituation(team1,team2,round):
+	team1players = list(team1[1])
+	team2players = list(team2[1])
+	clutchsitch1 = False
+	sitstate1 = 0
+	sitstate2 = 0
+	lock1 = True
+	lock2 = True
+	for element in round:
+		#print(element)
+		if "killed" in element:
+			killed = getkilled(element)
+			if killed in team1players:
+				team1players.remove(killed)
+			if killed in team2players:
+				team2players.remove(killed)
+	
+		if len(team1players) == 1 and lock1 == True:
+			clutchsitch1 = True
+			clutchplayer1 = team1players[0]
+			sitstate1 = len(team2players)
+			lock1 = False
+
+		if len(team2players) == 1 and lock2 == True:
+			clutchsitch2 = True
+			clutchplayer2 = team2players[0]
+			sitstate2 = len(team2players)
+			lock1 = False
+	
+	if clutchsitch1:
+		if clutchplayer1 in team1players:
+			return clutchplayer1,sitstate1
+	if clutchsitch2:
+		if clutchplayer2 in team1players:
+			return clutchplayer2,sitstate2
+	return False
+
+
+
 def setteams(teams,team1tag,team2tag):
-	team1 = [0]
-	team2 = [0]
+	team1 = [team1tag]
+	team2 = [team2tag]
 	for key in teams:
 		if key == team1tag:
 			team1.append(teams.get(key))
@@ -148,24 +188,41 @@ def getwinner(team1,team2,team1tag,team2tag,round):
 
 	if elimination(team1,team2,team1tag,team2tag,round) != "":
 		return elimination(team1,team2,team1tag,team2tag,round)
-
 	return team1tag
 
+
 def elimination(team1,team2,team1tag,team2tag,round):
-	team1players = 5
-	team2players = 5
+	team1players = list(team1[1])
+	team2players = list(team2[1])
 	for element in round:
+		#print(element)
 		if "killed" in element:
 			killed = getkilled(element)
-			if killed in team1:
-				team1players -=1
-			else:
-				team2players -=1
-	if team1players == 0:
+			if killed in team1players:
+				team1players.remove(killed)
+			if killed in team2players:
+				team2players.remove(killed)
+	#print(team1players,team2players)
+	if len(team1players) == 0:
 		return team2tag
-	if team2players ==0:
+	if len(team2players) ==0:
 		return team1tag
 	return ""
+
+def overtimescore(team1,team2,team1tag,team2tag,element,round):
+
+	n = 3
+	round_aux = int(round)
+	if round_aux > 36:
+		round_aux = round_aux%36
+		round_aux = round_aux + 30
+
+	if round_aux-30 <= 3:
+		registerscore(team2,team1,team2tag,team1tag,element)
+	else:
+		registerscore(team1,team2,team1tag,team2tag,element)
+
+	return 0
 
 
 def thescript(filenamelist):
@@ -182,19 +239,30 @@ def thescript(filenamelist):
 		
 		#setup teams
 		teams = getteams("teams.txt")
+		#print(teams)
 		lineups = setteams(teams,team1tag,team2tag)
 		team1 = lineups[0]
 		team2 = lineups[1]
-
+		#print(team1,team2)
 		game = getroundlist(logfile)
 
 		round = 1
+		# MR3
+		overtime_aux = 3
+		overtimebol = True
+
 		for element in game:
 			roundanalyser(element)
+			if round > 30:
+				overtimescore(team1,team2,team1tag,team2tag,element,round)
+				round +=1
 			if round < 16:
 				registerscore(team1,team2,team1tag,team2tag,element)
+				round +=1
 			else:
-				registerscore(team1,team2,team2tag,team1tag,element)
+				registerscore(team2,team1,team2tag,team1tag,element)
+				round +=1
+			print(score)
 
 		finalscore =  []
 		finalscore.append(killcount)
@@ -203,8 +271,7 @@ def thescript(filenamelist):
 		finalscore.append(entryfrags)
 		finalscore.append(awpkills)
 
-		#print(finalscore)
-		print(score)
+		#print(score)
 
 	return finalscore
 
@@ -215,7 +282,7 @@ def main():
 	print("Welcome to CSGOSTATS")
 
 	
-	filenames = ["alientech_hexagone_cache.txt"]
+	filenames = ["Alientech_Hexagone_cache.txt"]
 	thescript(filenames)
 
 	return 0
