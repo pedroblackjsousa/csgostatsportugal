@@ -95,24 +95,6 @@ Tick: 75038 : obj killed SDRIZZZ using a awp
 Tick: 75102 : ZELIN killed watsoN with a headshot using a ak47
 Tick: 75470 : Born killed pnr with a headshot using a ak47
 Tick: 75578 : ZELIN killed Born using a ak47
-Tick: 75578  Event: round_end 
-Tick: 76178  Event: cs_pre_restart 
-Tick: 76220  Event: bomb_pickup 
-Tick: 76220  Event: round_start 
-Tick: 87960  Event: bomb_dropped 
-Tick: 88036  Event: bomb_pickup 
-Tick: 123924 : stadod0 killed  using a world
-Tick: 123924  Event: bomb_dropped 
-Tick: 123924 : watsoN killed  using a world
-Tick: 123924 : ZELIN killed  using a world
-Tick: 123924 : pnr killed  using a world
-Tick: 123924 : renatoohaxx killed  using a world
-Tick: 123924 : zlyNX killed  using a world
-Tick: 123924 : Born killed  using a world
-Tick: 123924 : SDRIZZZ killed  using a world
-Tick: 123924 : JUST killed  using a world
-Tick: 123924 : obj killed  using a world
-Tick: 123924  Event: announce_phase_end 
 Tick: 123924  Event: round_end 
 Tick: 123924  Event: cs_pre_restart 
 Tick: 123924  Event: bomb_pickup 
