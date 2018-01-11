@@ -13,13 +13,14 @@ awpkills = {}
 score = {}
 #stoppermessage = "Host_WriteConfiguration"
 
+
 def getroundlist(demo):
 	roundlist = []
 	auxlist =  []
 	for line in demo:
 		if "round_end" in line.split(" "):
 			auxlist.append(line.strip())
-			roundlist.append(auxlist)
+			roundlist.append(cleanround(auxlist))
 			auxlist = []
 		else:
 			auxlist.append(line.strip())
@@ -51,14 +52,6 @@ def updatedict(dictionary,key):
 	else:
 		dictionary[key] +=1	
 
-def populatedict(dictionary,listofkeys):
-	for key in listofkeys:
-		if dictionary.get(key) is None:
-			dictionary[key] = 0
-		else:
-			continue
-
-
 def roundanalyser(round):
 	#start parsing the text
 	entryfrag = True
@@ -83,6 +76,7 @@ def clutchsituation(team1,team2,round):
 	team1players = list(team1[1])
 	team2players = list(team2[1])
 	clutchsitch1 = False
+	clutchsitch2 = False
 	sitstate1 = 0
 	sitstate2 = 0
 	lock1 = True
@@ -115,8 +109,6 @@ def clutchsituation(team1,team2,round):
 		if clutchplayer2 in team1players:
 			return clutchplayer2,sitstate2
 	return False
-
-
 
 def setteams(teams,team1tag,team2tag):
 	team1 = [team1tag]
@@ -156,12 +148,21 @@ def registerscore(team1,team2,team1tag,team2tag,round):
 		score[team1tag] = 0
 	if score.get(team2tag) is None:
 		score[team2tag] = 0
-	winner = getwinner(team1,team2,team1tag,team2tag,round)
+	winner = getroundwinner(team1,team2,team1tag,team2tag,round)
 	score[winner] +=1
 	return 0
 
+def cleanround(round):
 
-def getwinner(team1,team2,team1tag,team2tag,round):
+	cleanedround = []
+	round_started_index = 0
+	for line in round:
+		if "round_start" in line:
+			round_started_index = round.index(line)
+	return round[round_started_index:]
+
+
+def getroundwinner(team1,team2,team1tag,team2tag,round):
 
 	bomb_defused = False
 	bomb_exploded = False
@@ -182,13 +183,22 @@ def getwinner(team1,team2,team1tag,team2tag,round):
 		return team1tag
 	if bomb_exploded:
 		return team2tag
+
+
 	if bomb_planted and not bomb_defused:
 		if bomb_planted_index<round_end_index:
 			return team2tag
-
+	
 	if elimination(team1,team2,team1tag,team2tag,round) != "":
 		return elimination(team1,team2,team1tag,team2tag,round)
+
+	#print(round)
 	return team1tag
+
+def getmatchwinner(score):
+	winner = max(score, key = score.get)
+	loser = min(score, key = score.get)
+	return [winner,loser]
 
 
 def elimination(team1,team2,team1tag,team2tag,round):
@@ -209,20 +219,20 @@ def elimination(team1,team2,team1tag,team2tag,round):
 		return team1tag
 	return ""
 
-def overtimescore(team1,team2,team1tag,team2tag,element,round):
-
-	n = 3
-	round_aux = int(round)
-	if round_aux > 36:
-		round_aux = round_aux%36
-		round_aux = round_aux + 30
-
-	if round_aux-30 <= 3:
-		registerscore(team2,team1,team2tag,team1tag,element)
-	else:
-		registerscore(team1,team2,team1tag,team2tag,element)
-
+def populatedicts(team1,team2,score):
+	teams = [team1,team2]
+	for team in teams:
+		for player in team:
+			killcount[player] = 0
+			deathcount[player] = 0
+			entryfrags[player] = 0
+			headshots[player] = 0
+			awpkills[player] = 0
+	for key in score:
+		score[key] = 0
 	return 0
+
+
 
 
 def thescript(filenamelist):
@@ -246,24 +256,50 @@ def thescript(filenamelist):
 		#print(team1,team2)
 		game = getroundlist(logfile)
 
+
+		
+		populatedicts(team1[1],team2[1],score)
+
+		print(killcount,deathcount,headshots,entryfrags,awpkills)
+
 		round = 1
 		# MR3
+		ticker = 0
 		overtime_aux = 3
 		overtimebol = True
 
 		for element in game:
 			roundanalyser(element)
-			if round > 30:
-				overtimescore(team1,team2,team1tag,team2tag,element,round)
+			if round >= 31:
+				if overtimebol:
+					registerscore(team2,team1,team2tag,team1tag,element)
+					ticker +=1
+					if ticker == overtime_aux:
+						ticker == 0
+						overtimebol = False
+				else:
+					registerscore(team1,team2,team1tag,team2tag,element)
+					ticker +=1
+					if ticker == overtime_aux:
+						ticker == 0
+						overtimebol = True
 				round +=1
-			if round < 16:
+				print(score)
+				continue
+			if round <= 15:
 				registerscore(team1,team2,team1tag,team2tag,element)
 				round +=1
+				print(score)
+				continue
 			else:
 				registerscore(team2,team1,team2tag,team1tag,element)
 				round +=1
-			print(score)
-
+				print(score)
+				continue
+			if not clutchsituation(team1,team2,element):
+				continue
+			else:
+				continue
 		finalscore =  []
 		finalscore.append(killcount)
 		finalscore.append(deathcount)
@@ -271,20 +307,55 @@ def thescript(filenamelist):
 		finalscore.append(entryfrags)
 		finalscore.append(awpkills)
 
-		#print(score)
-
+	print(score)
+	
 	return finalscore
 
+#Record Data
+def recorddata(totalscores,team1tag,team2tag,gamemap,winner,loser):
+	filename = team1tag + "_" + team2tag + "_" + gamemap + "_output.txt"
+	f = open(filename,'w')
+	f.write("MATCH: " + team1tag + "-" + team2tag + "\n")
+	f.write("MAP: " + gamemap+"\n")
+	aux_var = getmatchwinner(score)
+	winner = aux_var[0]
+	loser = aux_var[1]
+	f.write("WINNER: " + winner + "\n")
+	f.write("LOSER: " + loser + "\n")
+	score1 = score.get(team1tag)
+	score2 = score.get(team2tag)
+	f.write("SCORE: " + str(score1) + "-" + str(score2) +"\n")
+	f.write("Player stats\n")
 
+	#edit more 
+	f.write(winner[0] + "\n")
+	for key in winner[1]:
+		f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
+	f.write(loser[0]+"\n")
+	for key in loser[1]:
+		f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
+	f.close()
+	return 0
+
+#Output Score to Console
+def outputtotalscores(totalscores):
+	for key in totalscores[0]:
+		print(key)
+		print("kills  - ",totalscores[0].get(key),"---",totalscores[1].get(key)) 
+		print("Deaths  - ",totalscores[1].get(key))
+		print("Headshots  - ",(totalscores[2].get(key)))
+		print("entry frags  - ", totalscores[3].get(key))
+		print("awp kills  - ",totalscores[4].get(key))
+		print("---------------------------------------------\n\n")
+	return 0
 
 def main():
 	
 	print("Welcome to CSGOSTATS")
 
 	
-	filenames = ["Alientech_Hexagone_cache.txt"]
-	thescript(filenames)
-
+	filenames = ["Astralis_SK_Cache.txt","Astralis_SK_Inferno.txt","SK_Astralis_Mirage.txt"]
+	stats = thescript(filenames)
 	return 0
 
 if __name__ == "__main__":
