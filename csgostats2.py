@@ -11,6 +11,7 @@ entryfrags = {}
 headshots = {}
 awpkills = {}
 score = {}
+clutch_history = list()
 #stoppermessage = "Host_WriteConfiguration"
 
 
@@ -92,23 +93,28 @@ def clutchsituation(team1,team2,round):
 	
 		if len(team1players) == 1 and lock1 == True:
 			clutchsitch1 = True
+	#		print("yey1")
 			clutchplayer1 = team1players[0]
 			sitstate1 = len(team2players)
 			lock1 = False
 
 		if len(team2players) == 1 and lock2 == True:
+	#		print("yey2")
 			clutchsitch2 = True
 			clutchplayer2 = team2players[0]
-			sitstate2 = len(team2players)
-			lock1 = False
-	
+			sitstate2 = len(team1players)
+			lock2 = False
+	#print(team1players,team2players)
 	if clutchsitch1:
 		if clutchplayer1 in team1players:
-			return clutchplayer1,sitstate1
+	#		print("yey3")
+			return [True, clutchplayer1,sitstate1]
 	if clutchsitch2:
-		if clutchplayer2 in team1players:
-			return clutchplayer2,sitstate2
-	return False
+		if clutchplayer2 in team2players:
+	#		print("yey4")
+			return [True, clutchplayer2 ,sitstate2]
+	#print("boring yey")
+	return [False]
 
 def setteams(teams,team1tag,team2tag):
 	team1 = [team1tag]
@@ -219,6 +225,8 @@ def elimination(team1,team2,team1tag,team2tag,round):
 		return team1tag
 	return ""
 
+
+
 def populatedicts(team1,team2,score):
 	teams = [team1,team2]
 	for team in teams:
@@ -257,10 +265,10 @@ def thescript(filenamelist):
 		game = getroundlist(logfile)
 
 
-		
+		#print(team1,team2)
 		populatedicts(team1[1],team2[1],score)
 
-		print(killcount,deathcount,headshots,entryfrags,awpkills)
+		#print(killcount,deathcount,headshots,entryfrags,awpkills)
 
 		round = 1
 		# MR3
@@ -270,6 +278,10 @@ def thescript(filenamelist):
 
 		for element in game:
 			roundanalyser(element)
+			pre_clutch = clutchsituation(team1,team2,element)
+			if pre_clutch[0]:
+				clutch_history.append([pre_clutch[1],pre_clutch[2]])
+				#print(round)
 			if round >= 31:
 				if overtimebol:
 					registerscore(team2,team1,team2tag,team1tag,element)
@@ -308,6 +320,8 @@ def thescript(filenamelist):
 		finalscore.append(awpkills)
 
 	print(score)
+	if len(clutch_history) > 0:
+		print(clutch_history)
 	
 	return finalscore
 
@@ -354,8 +368,10 @@ def main():
 	print("Welcome to CSGOSTATS")
 
 	
-	filenames = ["Astralis_SK_Cache.txt","Astralis_SK_Inferno.txt","SK_Astralis_Mirage.txt"]
+	filenames = ["Alientech_Hexagone_cache.txt"]
 	stats = thescript(filenames)
+	outputtotalscores(stats)
+	#print(clutch_history)
 	return 0
 
 if __name__ == "__main__":
