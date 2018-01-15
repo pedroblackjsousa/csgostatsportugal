@@ -261,7 +261,7 @@ def thescript(filenamelist):
 		lineups = setteams(teams,team1tag,team2tag)
 		team1 = lineups[0]
 		team2 = lineups[1]
-		#print(team1,team2)
+		print(team1,team2)
 		game = getroundlist(logfile)
 
 
@@ -319,14 +319,14 @@ def thescript(filenamelist):
 		finalscore.append(entryfrags)
 		finalscore.append(awpkills)
 
-	print(score)
 	if len(clutch_history) > 0:
 		print(clutch_history)
-	
+	participants = getmatchwinner(score)
+	recorddata(finalscore,team1tag,team2tag,team1,team2,gamemap,participants[0],participants[1])
 	return finalscore
 
 #Record Data
-def recorddata(totalscores,team1tag,team2tag,gamemap,winner,loser):
+def recorddata(totalscores,team1tag,team2tag,team1,team2,gamemap,winner,loser):
 	filename = team1tag + "_" + team2tag + "_" + gamemap + "_output.txt"
 	f = open(filename,'w')
 	f.write("MATCH: " + team1tag + "-" + team2tag + "\n")
@@ -339,15 +339,23 @@ def recorddata(totalscores,team1tag,team2tag,gamemap,winner,loser):
 	score1 = score.get(team1tag)
 	score2 = score.get(team2tag)
 	f.write("SCORE: " + str(score1) + "-" + str(score2) +"\n")
-	f.write("Player stats\n")
+	
+	#f.write("Player stats\n")
 
 	#edit more 
-	f.write(winner[0] + "\n")
-	for key in winner[1]:
-		f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
-	f.write(loser[0]+"\n")
-	for key in loser[1]:
-		f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
+	f.write("\n" + winner + "\n")
+	if winner == team1[0]:
+		for key in team1[1]:
+			f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
+		f.write("\n" + loser+"\n")
+		for key in team2[1]:
+			f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
+	else:
+		for key in team2[1]:
+			f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
+		f.write("\n" + loser+"\n")
+		for key in team1[1]:
+			f.write(key + ": " + str(totalscores[0].get(key)) + " - " + str(totalscores[1].get(key)) + " - " + str(totalscores[2].get(key)) + " - " + str(totalscores[3].get(key)) + " - " + str(totalscores[4].get(key))+"\n")
 	f.close()
 	return 0
 
@@ -368,7 +376,7 @@ def main():
 	print("Welcome to CSGOSTATS")
 
 	
-	filenames = ["Alientech_Hexagone_cache.txt"]
+	filenames = ["Alientech_Hexagone_cache_1.txt"]
 	stats = thescript(filenames)
 	outputtotalscores(stats)
 	#print(clutch_history)
